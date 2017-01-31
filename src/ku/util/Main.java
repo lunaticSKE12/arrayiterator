@@ -12,7 +12,7 @@ public class Main {
 		
 		ArrayIterator<String> iter = new ArrayIterator( array ); 
 	
-
+		
 		System.out.println(iter.next( ));
 		System.out.println(iter.hasNext( ));
 		System.out.println(iter.hasNext( ));	
@@ -20,7 +20,7 @@ public class Main {
 		System.out.println(iter.next( ));
 		System.out.println(iter.next( ));
 		System.out.println(iter.hasNext( ));
-		System.out.println(iter.next( ));
+		//System.out.println(iter.next( ));
 		
 		/*String [] fruit = { "apple", null, null, "banana"}; 
 		ArrayIterator<String> it = new ArrayIterator<String>(fruit);

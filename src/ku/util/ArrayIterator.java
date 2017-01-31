@@ -65,5 +65,15 @@ public class ArrayIterator<T> implements Iterator<T> {
 
 		throw new NoSuchElementException();
 	}
+	
+	
+	/**
+	 * remove item from array
+	 */
+	
+	public void remove(){
+		if(cursor > 0)
+			this.array[cursor - 1] = null;
+	}
 
 }
