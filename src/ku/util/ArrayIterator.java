@@ -1,11 +1,22 @@
 package ku.util;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
+
+/**
+ * 
+ * @author Napong Dungduangsasitorn
+ *
+ * @param <T>
+ */
 
 public class ArrayIterator<T> implements Iterator<T> {
 	
 	/** attribute for the array we want to iterate over */   
+	
 	private T[ ] array; 
+	
+	/* cursor for remember the position in collection */
 	
 	private int cursor;
 
@@ -14,15 +25,15 @@ public class ArrayIterator<T> implements Iterator<T> {
 	  * @param array is the array to iterate over     
 	  */   
 	public ArrayIterator(T[] array) {         
-		this.array = array;        
-		this.cursor = 0;
+		this.array = array; 
+		this.cursor = 0; // cursor points to the first element. 
 		
 	}
 	
 	@Override
 	public boolean hasNext() {
-		// TODO Auto-generated method stub
-		return false;
+		
+		return this.cursor < array.length - 1;
 	}
 
 	/**     
@@ -33,8 +44,16 @@ public class ArrayIterator<T> implements Iterator<T> {
 	
 	@Override
 	public T next() {
-		// TODO Auto-generated method stub
-		return null;
+		if(hasNext()){
+			for(int i = this.cursor ; i < array.length ; i++){
+				this.cursor++;
+				if(this.array[i] != null){
+					return this.array[i];
+				}
+			}
+		}
+
+		throw new NoSuchElementException();
 	}
 
 }
