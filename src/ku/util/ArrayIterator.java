@@ -74,6 +74,9 @@ public class ArrayIterator<T> implements Iterator<T> {
 	public void remove(){
 		if(cursor > 0)
 			this.array[cursor - 1] = null;
+		else {
+			throw new IllegalStateException();
+		}
 	}
 
 }

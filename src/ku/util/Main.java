@@ -8,18 +8,18 @@ package ku.util;
 
 public class Main {
 	public static void main(String[] arg){
-		String [] array = { "apple", "banana", null, "carrot" }; 
-		
+		//String [] array = { "apple", "banana", null, "carrot" }; 
+		String [] array = { null, null,null};
 		ArrayIterator<String> iter = new ArrayIterator( array ); 
 	
 		
 		System.out.println(iter.next( ));
 		System.out.println(iter.hasNext( ));
-		System.out.println(iter.hasNext( ));	
+		/*System.out.println(iter.hasNext( ));	
 		System.out.println(iter.hasNext( ));	
 		System.out.println(iter.next( ));
 		System.out.println(iter.next( ));
-		System.out.println(iter.hasNext( ));
+		System.out.println(iter.hasNext( ));*/
 		//System.out.println(iter.next( ));
 		
 		/*String [] fruit = { "apple", null, null, "banana"}; 
